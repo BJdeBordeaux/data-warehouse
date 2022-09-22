@@ -1,6 +1,5 @@
--- Active: 1663786901850@@127.0.0.1@5432@tp_note@public
--- votre nom:
--- votre prenom:
+-- votre nom: LI
+-- votre prenom: Junji
 
 -- Q1
 SELECT f.description,
