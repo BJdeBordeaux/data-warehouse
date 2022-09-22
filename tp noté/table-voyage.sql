@@ -1,0 +1,13 @@
+create table voyage(personne text,depart int,destination int,nb_j Decimal);
+ALTER TABLE voyage ADD CONSTRAINT voyage_depart_fkey FOREIGN KEY (depart) REFERENCES geoitem(geonameid);
+ALTER TABLE voyage ADD CONSTRAINT voyage_destination_fkey FOREIGN KEY (destination) REFERENCES geoitem(geonameid);
+insert into voyage values ('Durand',2973385,2972315,.9);
+insert into voyage values ('Durand',2972315,2972328,1.5);
+insert into voyage values ('Durand',2972328,2974733,.8);
+insert into voyage values ('Durand',2974733,3006767,2.4);
+insert into voyage values ('Petit',3008379,3007609,1.9);
+insert into voyage values ('Petit',3007609,3007874,.8);
+insert into voyage values ('Petit',3007874,2990969,.6);
+insert into voyage values ('Dubois',2967758,2969284,.8);
+insert into voyage values ('Dubois',2969284,2972742,1.2);
+insert into voyage values ('Dubois',2972742,2976406,.3);
