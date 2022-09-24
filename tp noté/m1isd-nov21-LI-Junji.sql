@@ -1,8 +1,9 @@
+-- Active: 1663786901850@@127.0.0.1@5432@tp_note@public
 -- votre nom: LI
 -- votre prenom: Junji
 
 -- Q1
-SELECT f.description,
+SELECT fc.description,
     cc.name as ctname,
     count(*) as nb
 FROM country c, continent cc, geoitem g, feature f, featureclass fc
@@ -10,8 +11,7 @@ WHERE g.country_code = c.iso
     AND c.continent = cc.code
     AND g.feature_code = f.code 
     AND f.class = fc.code
-    AND f.description is NOT NULL
-GROUP BY ctname, f.description
+GROUP BY ctname, fc.description
 ORDER BY nb DESC;
 
 /* 0 result : check join condition. If Ok, retry/rewrite */
